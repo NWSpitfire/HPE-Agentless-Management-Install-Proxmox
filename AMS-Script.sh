@@ -6,8 +6,10 @@
 
 
 echo "Welcome to the Agentless Management Installer for PVE8 (Debian)"
+echo ""
 echo "WARNING: Run this script at your own risk. This is not an HP Enterprise script!"
 echo "This is for HPE Gen10 Servers - Tested with DL360 Gen10"
+echo ""
 echo "Press Ctrl+C within 8 seconds to cancel installation"
 
 echo ""
