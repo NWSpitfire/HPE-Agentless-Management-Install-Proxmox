@@ -24,9 +24,9 @@ echo ""
 echo "Backing Up sources.list in case of issues and adding HPE repository to sources.list"
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 
-echo "# HP Agentless Management Service for iLO - added manually" | sudo tee -a /etc/apt/sources.list
+echo "# HP Agentless Management Service for iLO - added manually" | tee -a /etc/apt/sources.list
 
-echo "deb http://downloads.linux.hpe.com/SDR/repo/mcp bookworm/current non-free" | sudo tee -a /etc/apt/sources.list
+echo "deb http://downloads.linux.hpe.com/SDR/repo/mcp bookworm/current non-free" | tee -a /etc/apt/sources.list
 
 echo "Adding HPE GPG Keys"
 
