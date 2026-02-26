@@ -21,6 +21,10 @@ echo "--- Beginning Install ---"
 
 echo ""
 
+echo "Installing gnupg"
+
+apt install -y gnupg
+
 echo "Adding HPE GPG Keys"
 
 curl https://downloads.linux.hpe.com/SDR/hpPublicKey2048_key1.pub | gpg --dearmor | sudo tee -a /usr/share/keyrings/hpePublicKey.gpg > /dev/null
@@ -32,7 +36,7 @@ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 
 echo "# HP Agentless Management Service for iLO - added manually" | tee -a /etc/apt/sources.list
 
-deb [signed-by=/usr/share/keyrings/hpePublicKey.gpg] "https://downloads.linux.hpe.com/SDR/repo/mcp/ bookworm/current non-free" | tee -a /etc/apt/sources.list
+deb [signed-by=/usr/share/keyrings/hpePublicKey.gpg] https://downloads.linux.hpe.com/SDR/repo/mcp/ bookworm/current non-free | tee -a /etc/apt/sources.list
 
 
 echo "Installing Packages"
